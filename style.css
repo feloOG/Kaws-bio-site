@@ -1,125 +1,153 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Lexend";
+/* ---ANIMACIONES--- */
+
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
-body{
-    font-size: 32px;
+section.animar-entrada {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* -----------------HEAADER-------------------- */
+/* ---HEADER--- */
 
-nav ul li{
-    font-size: 1.8em;
-    padding: 15px;
+header{
+  padding: 3%;
 }
-.colnav{
-    background-color: rgba(41, 0, 0, 0.774);
-    border-radius: 10px;
-}
-ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-size: 0.5em;
-}
-a{
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-.imagen-superior{
-    max-width: 100%;
+nav{
+  background-color: rgb(59, 59, 59);
+  border-radius: 15px;
+  margin-left: 5%;
+  margin-right: 5%;
+  ul{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      text-align: center;
+  }
+  li{
+  list-style: none;
+  font-size: 0.7em; 
+  padding: 2.5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  a{
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+  }
+  }
 }
 .imagen-sup{
-    text-align: center;
+  text-align: center;
 }
-.imagen-sup-text{
-    text-align: center;
-    padding: 10%;
-    margin: 10%;
+.imagen-superior{
+  padding: 5%;
+  max-width: 70%;
+}
+.description-page-contenedor{
+  margin-top: 5%;
+  margin-bottom: 15%;
+  text-align: center;
+  h1{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.5;
+    margin-bottom: 5%;
+  }
+  p{
+    font-size: 1em;
+    padding-left: 15%;
+    padding-right: 15%;
+    }
 }
 
-
-
-
-/* ---------------MAIN------------------------- */
+/* ---CREATOR SECTION--- */
 
 .content-creator{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    background-color: rgb(0, 0, 0);
-    padding: 5%;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-.name-creator{
-    color: rgb(255, 255, 255);
-}
-.if-creator{
-    width: 100%;
-}
-.p-creator{
-    font-size: 1rem;
-    color: rgb(255, 255, 255);
-}
-.p-creator-div{
-    text-align: left;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  padding: 10%;
+  .p-creator-div{
+    text-align: center;
     align-content: center;
     padding-right: 2%;
-    color: rgb(121, 121, 121);
+  }
+  .name-creator{
+    color: rgb(109, 106, 106);
+    margin-bottom: 7%
+  }
+  .if-creator-div{
+    padding-left: 5%;
+    padding-right: 5%;
+    .if-creator{
+      width: 100%;
+    }
+  }
+  .p-creator{
+    font-size: 0.8em;
+    color: rgb(255, 255, 255);
+  }
 }
 
-
-
-
+/* ---KAWS WORLD--- */
 
 .sec-kaws-world{
-    padding: 6%;
-    text-align: center;
-}
-.kaws-world{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: 5%;
-    gap: 5%;
-    font-size: 0.5em;
-}
-.img-world{
-    max-width: 250px;
-}
-.p-kaws-world-l{
-    text-align: left;
-}
-.p-kaws-world-r{
-    text-align: right;
-}
-
-
-
-/* -----------FOOTER-------------------- */
-footer{
-    background-color: rgba(41, 0, 0, 0.774);
-    text-align: center;
-    font-size: 1.9em;
-    padding: 5%;
-    box-shadow: 0px 0px 30px 3px rgb(0, 0, 0);
-}
-.h3index{
-    margin-bottom: 5%;
+  padding-left: 10%;
+  padding-right: 10%; 
+  text-align: center;
+  margin-top: 25%;
+  margin-bottom: 20%;
+  h2{
     font-weight: bold;
-}
-.indexnav2{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-}
-.foota{
-    width: 15%;
-    max-width: 75px;
-    min-width: 50px;
-    &:hover{
-        transform:scale(1.30);
+    text-transform: uppercase;
+    font-size: 1.5;
+    margin-bottom: 8%;
+  }
+  .country-div{
+    padding: 8%;
+    margin-bottom: 10%;
+    .img-world{
+      max-width: 250px;
+      margin-top: 6%;
+      transition: transform 0.4s ease-in-out;
     }
+    p{
+      font-size: 1em;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+  }
+  .country-div1{
+    padding: 8%;
+    background-color: black;
+    color: white;
+    margin-bottom: 10%;
+    .img-world{
+      margin-bottom: 6%;
+      max-width: 250px;
+      transition: transform 0.4s ease-in-out;
+      box-shadow: 0 0 50px black;
+    }
+    p{
+      font-size: 1em;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+  }
+}
+
+/* ---ANIMACION WORLD SECTION--- */
+
+.img-world:hover {
+  transform: scale(1.1);
+}
+
+/* ---FOOTER--- */
+
+.img-foot-logo{
+  max-width: 50%;
 }
